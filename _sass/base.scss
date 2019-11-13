@@ -59,6 +59,13 @@ h6 {
   color: $body-heading-color;
 }
 
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4{font-weight: bolder;}
+
+.main-content-wrap, html{
+  scroll-behavior: smooth;
+}
+
 p {
   margin-bottom: 1em;
 }
@@ -109,3 +116,6 @@ hr {
   background-color: $border-color;
   border: 0;
 }
+
+
+

@@ -118,3 +118,55 @@
     }
   }
 }
+
+
+// Make Nice-looking Nav Bar
+
+.navigation-list-link.active{
+  background-color: $base-color;
+  color: #FFF !important;
+}
+
+.navigation-list-link.active:hover{
+  background-color: $base-color;
+  color: #FFF !important;
+}
+
+.navigation-list-link:hover{
+  background-color: $grey-lt-200;
+}
+
+.navigation-list-link{
+  padding-left: 0.7em;
+  border-radius: 1.0em;
+  //border-top-right-radius: 0px;
+  //border-bottom-right-radius: 0px;
+}
+
+.navigation-list-child-list .navigation-list-link{
+  padding-left: 1.4em;
+}
+
+.navigation-list-item::before{
+  padding-left: 1.4em;
+}
+
+
+.navigation-list-item.active::before{
+  color: #FFF !important;
+}
+
+.svg-inline--fa{
+  margin-right: 10px;
+  width:1.0em;
+}
+
+.nav-icons{
+  display: inline-block;
+  width:30px;
+}
+
+.nav-carrot{
+  display: inline-block;
+  margin-left: 10px;
+}
