@@ -130,43 +130,7 @@
 }
 
 
-// Make Nice-looking Nav Bar
-
-/*.navigation-list-link.active{
-  background-color: $base-color;
-  color: #FFF !important;
-}
-
-.navigation-list-link.active:hover{
-  background-color: $base-color;
-  color: #FFF !important;
-}
-
-
-.navigation-list-link:hover{
-  background-color: $grey-lt-200;
-}
-
-.navigation-list-link{
-  padding-left: 0.7em;
-  border-radius: 1.0em;
-}
-
-
-.navigation-list-child-list .navigation-list-link{
-  padding-left: 1.4em;
-}
-
-
-.navigation-list-item::before{
-  padding-left: 1.4em;
-}
-
-
-.navigation-list-item.active::before{
-  color: #FFF !important;
-}
-*/
+// Make Nice-Looking Nav Bar with FontAwesome
 
 .svg-inline--fa{
   margin-right: 10px;
