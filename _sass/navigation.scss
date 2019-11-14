@@ -14,6 +14,7 @@
 
   .navigation-list-link {
     color: $nav-child-link-color;
+    padding-left: 1.4em;
   }
 
   .navigation-list-item {
@@ -21,6 +22,7 @@
 
     &::before {
       position: absolute;
+      padding-left: 1.4em;
       margin-top: 0.3em;
       margin-left: -0.8em;
       color: rgba($body-text-color, 0.3);
@@ -29,7 +31,7 @@
 
     &.active {
       &::before {
-        color: $body-text-color;
+        color: #FFF;
       }
     }
   }
@@ -58,11 +60,19 @@
   display: block;
   padding-top: $sp-1;
   padding-bottom: $sp-1;
+  padding-left: 0.7em;
+  border-radius: 1.0em;
+
+  &:hover{
+    background-color: $grey-lt-200;
+  }
 
   &.active {
     font-weight: 600;
-    color: $body-heading-color;
+    color: #FFF;
+    background-color: $base-color;
     text-decoration: none;
+
   }
 }
 
@@ -122,7 +132,7 @@
 
 // Make Nice-looking Nav Bar
 
-.navigation-list-link.active{
+/*.navigation-list-link.active{
   background-color: $base-color;
   color: #FFF !important;
 }
@@ -132,6 +142,7 @@
   color: #FFF !important;
 }
 
+
 .navigation-list-link:hover{
   background-color: $grey-lt-200;
 }
@@ -139,13 +150,13 @@
 .navigation-list-link{
   padding-left: 0.7em;
   border-radius: 1.0em;
-  //border-top-right-radius: 0px;
-  //border-bottom-right-radius: 0px;
 }
+
 
 .navigation-list-child-list .navigation-list-link{
   padding-left: 1.4em;
 }
+
 
 .navigation-list-item::before{
   padding-left: 1.4em;
@@ -155,6 +166,7 @@
 .navigation-list-item.active::before{
   color: #FFF !important;
 }
+*/
 
 .svg-inline--fa{
   margin-right: 10px;
