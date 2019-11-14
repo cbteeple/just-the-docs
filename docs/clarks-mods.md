@@ -41,3 +41,4 @@ The page icon is automatically used in the navigation. Add it to the page using 
 1. **Add the site logo in addition to the site name.** In the original theme this option replaces the site name (which I didn't like all that much)
 2. **Bold headers.** This makes them more visually distinct from text
 3. **"Lato" font** Lato is a nice, easy-to-read font from [Google Fonts](https://fonts.google.com/specimen/Lato) with a variety of weights to choose from.
+4. **Smooth scrolling within the page.** This makes moving to a section from the table of contents visually consistent. No longer an abrupt page jump.
