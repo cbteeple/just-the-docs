@@ -79,10 +79,19 @@
 // Small screen nav
 
 .main-nav {
-  display: none;
+  display: block;
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  transition: all 0.3s;
 
   &.nav-open {
-    display: block;
+    height: 100%;
+    margin-top: 100%;
   }
   @include mq(md) {
     display: block;
