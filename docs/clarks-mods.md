@@ -2,7 +2,7 @@
 layout: default
 title: Clark's Upgrades
 nav_order: 2
-permalink: /upgrades
+permalink: /docs/upgrades
 font_awesome: fas fa-thumbs-up
 ---
 

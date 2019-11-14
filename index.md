@@ -19,7 +19,7 @@ Just the Docs gives your documentation a jumpstart with a responsive Jekyll them
 
 ## Modifications from vanilla "Just the Docs"
 
-[More about Clark's Upgrades](/upgrades){: .btn .btn-primary}
+[More about Clark's Upgrades](docs/upgrades){: .btn .btn-primary}
 
 1. Nicer-looking Navigation
 2. Inclusion of FontAwesome icons
