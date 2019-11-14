@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Customization
-nav_order: 6
+nav_order: 7
+font_awesome: "fas fa-sliders-h"
 ---
 
-# Customization
+# <i class="{{ page.font_awesome }}"></i> {{ page.title }}
 {: .no_toc }
 
 ## Table of contents

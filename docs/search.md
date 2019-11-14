@@ -1,10 +1,11 @@
 ---
 layout: default
 title: Search
-nav_order: 7
+nav_order: 8
+font_awesome: "fas fa-search"
 ---
 
-# Search
+# <i class="{{ page.font_awesome }}"></i> {{ page.title }}
 {: .no_toc }
 
 ## Table of contents
