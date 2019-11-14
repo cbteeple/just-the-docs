@@ -82,7 +82,7 @@
   display: none;
 
   &.nav-open {
-    height: 100%;
+    display: block;
   }
   @include mq(md) {
     display: block;
