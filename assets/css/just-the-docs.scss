@@ -47,3 +47,9 @@ $logo: "{{ site.logo | absolute_url }}";
 @import "./code";
 @import "./utilities/utilities";
 @import "./overrides";
+
+@media (prefers-color-scheme: dark) {
+    html {
+      content: "dark";
+    }
+}

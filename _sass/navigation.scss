@@ -31,7 +31,7 @@
 
     &.active {
       &::before {
-        color: #FFF;
+        color: $sidebar-color;
       }
     }
   }
@@ -64,12 +64,12 @@
   border-radius: 1.0em;
 
   &:hover{
-    background-color: $grey-lt-200;
+    background-color: $nav-link-hover-color;
   }
 
   &.active {
     font-weight: 600;
-    color: #FFF;
+    color: $sidebar-color;
     background-color: $base-color;
     text-decoration: none;
 
