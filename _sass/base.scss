@@ -114,6 +114,10 @@ svg {
   height: auto;
 }
 
+svg .accent {
+    fill: $base-color;
+}
+
 hr {
   height: 1px;
   padding: 0;
