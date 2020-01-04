@@ -17,6 +17,7 @@ font_awesome: fas fa-thumbs-up
 
 ---
 
+
 ## Nicer-looking navigation
 - Highlight the active page based on the global color scheme
 - Hover effects (seems like this should have been a basic inclusion in the original)
@@ -36,6 +37,12 @@ The page icon is automatically used in the navigation. Add it to the page using 
 ```html
 <i class="{{ page.font_awesome }}"></i>
 ```
+
+## Modal overlays for pictures
+Thanks to [jtebert](https://github.com/jtebert).
+
+![The world is just within reach!]({{ "assets/images/just-the-docs.png" | absolute_url }})
+
 
 ## Smaller Tweaks
 1. **Add the site logo in addition to the site name.** In the original theme this option replaces the site name (which I didn't like all that much)
