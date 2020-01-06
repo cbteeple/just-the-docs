@@ -8,12 +8,12 @@ var openModal = function (img) {
     // img.classList.add('active-modal');
     modalImg.src = img.src;
     modalOverlay.classList.add('active');
-    modalOverlay.classList.add('add-bg');
+    //modalOverlay.classList.add('add-bg');
 }
 
 var closeModal = function () {
     modalOverlay.classList.remove('active');
-    modalOverlay.classList.remove('add-bg');
+    //modalOverlay.classList.remove('add-bg');
 }
 
 window.onload = function () {
