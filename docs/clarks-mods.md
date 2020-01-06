@@ -39,9 +39,34 @@ The page icon is automatically used in the navigation. Add it to the page using 
 ```
 
 ## Modal overlays for pictures
-Thanks to [jtebert](https://github.com/jtebert).
+Thanks to [jtebert](https://github.com/jtebert) for the base code. I've added a few more mods to include captions for your figures using the _alt_ field in HTML.
 
-![The world is just within reach!]({{ "assets/images/just-the-docs.png" | absolute_url }})
+**Example (Markdown):**
+
+``` markdown
+![This image has transparency]({{ "assets/images/just-the-docs.png" | absolute_url }})
+```
+
+![This image has transparency]({{ "assets/images/just-the-docs.png" | absolute_url }})
+
+**Example (HTML):**
+
+``` html
+<img alt="This image has transparency"
+	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
+	 style="width:49.5%;" />
+<img alt="This image has a white background"
+	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
+	 style="width:49.5%;" />
+<!-- NOTE: You cannot have lines between img tags or your images won't end up next to each other. -->
+```
+
+<img alt="This image has transparency"
+	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
+	 style="width:49.5%;" />
+<img alt="This image has a white background"
+	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
+	 style="width:49.5%;" />
 
 
 ## Smaller Tweaks

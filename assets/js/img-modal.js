@@ -1,5 +1,6 @@
 var modalOverlay = document.getElementById("modal-overlay");
-var modalImg = document.getElementById("modal-content")
+var modalImg = document.getElementById("modal-img");
+var modalDes = document.getElementById("modal-description");
 
 var openModal = function (img) {
     // When an image is clicked, put its source in the modal and display it
@@ -7,6 +8,7 @@ var openModal = function (img) {
     // console.log(img.src);
     // img.classList.add('active-modal');
     modalImg.src = img.src;
+    modalDes.innerHTML = img.alt;
     modalOverlay.classList.add('active');
     //modalOverlay.classList.add('add-bg');
 }

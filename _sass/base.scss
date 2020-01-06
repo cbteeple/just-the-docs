@@ -165,15 +165,25 @@ hr {
         margin: auto;
         top: 50%;
         transform: translateY(-50%);
-        #modal-content {
+        #modal-img {
             display: block;
             position: relative;
             max-height: 90vh;
             margin: auto;
-            transition: all 0.3s;
-            transform: scale(0.7);
         }
-    }
+
+        #modal-content{
+          transition: all 0.3s;
+          transform: scale(0.7);
+        }
+
+        #modal-description {
+          color: #fff;
+          text-align: center;
+          padding: 1em;
+        }
+
+      }
 }
 
 //
