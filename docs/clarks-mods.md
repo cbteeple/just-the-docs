@@ -52,21 +52,27 @@ Thanks to [jtebert](https://github.com/jtebert) for the base code. I've added a 
 **Example (HTML):**
 
 ``` html
-<img alt="This image has transparency"
-	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
-	 style="width:49.5%;" />
-<img alt="This image has a white background"
-	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
-	 style="width:49.5%;" />
-<!-- NOTE: You cannot have lines between img tags or your images won't end up next to each other. -->
-```
+<div class="img-gallery">
 
 <img alt="This image has transparency"
-	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
-	 style="width:49.5%;" />
+	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}" />
+
 <img alt="This image has a white background"
-	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
-	 style="width:49.5%;" />
+	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}" />
+
+</div>
+<!-- NOTE: You MUST have lines between img tags and div tags due to the way things are parsed. -->
+```
+
+<div class="img-gallery">
+
+<img alt="This image has transparency"
+	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}" />
+
+<img alt="This image has a white background"
+	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}" />
+
+</div>
 
 
 ## Smaller Tweaks
