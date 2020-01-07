@@ -337,3 +337,10 @@ hr {
   object-fit: cover;
   vertical-align: bottom;
 }
+
+
+@media (min-width: 50rem) {
+  .img-gallery{
+    display: block;
+  }
+}
