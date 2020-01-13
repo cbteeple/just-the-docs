@@ -159,3 +159,13 @@
   display: inline-block;
   margin-left: auto;
 }
+
+.navigation-list-link .nav-carrot .fa-angle-right{
+    transition-property: transform;
+    transition: 0.2s;
+}
+
+.navigation-list-link:hover .nav-carrot .fa-angle-right{
+  //transform: translate(0.2em);
+  transform: rotate(90deg);
+}
