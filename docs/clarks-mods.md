@@ -52,16 +52,14 @@ Thanks to [jtebert](https://github.com/jtebert) for the base code. I've added a 
 **Example (HTML):**
 
 ``` html
-<div class="img-gallery">
-
 <img alt="This image has transparency"
-	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}" />
-
+	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
+	 class="gallery gallery-50"/>
 <img alt="This image has a white background"
-	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}" />
+	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
+	 class="gallery gallery-50"/>
 
-</div>
-<!-- NOTE: You MUST have lines between img tags and div tags due to the way things are parsed. -->
+<!--NOTE: You cannot have lines between images or they will be parsed as new paragraphs-->
 ```
 
 <img alt="This image has transparency"
