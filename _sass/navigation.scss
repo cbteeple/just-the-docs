@@ -9,7 +9,7 @@
 }
 
 .navigation-list-child-list {
-  padding-left: $sp-3;
+  padding-left: $sp-4;
   list-style: none;
 
   .navigation-list-link {
@@ -61,7 +61,9 @@
   padding-top: $sp-1;
   padding-bottom: $sp-1;
   padding-left: 0.7em;
+  padding-right: 0.7em;
   border-radius: 1.0em;
+  display:flex;
 
   &:hover{
     background-color: $nav-link-hover-color;
@@ -91,6 +93,17 @@
 
 .aux-nav {
   align-self: center;
+
+  .d-inline-block a{
+    display: flex;
+    align-items: center;
+  }
+
+
+}
+.aux-nav .svg-inline--fa{
+
+  margin-left: 0.25em;
 }
 
 // Breadcrumb nav
@@ -138,8 +151,8 @@
 }
 
 .nav-icons{
-  display: inline-block;
-  width:30px;
+  display: block;
+  width:1.7em;
 }
 
 .nav-carrot{

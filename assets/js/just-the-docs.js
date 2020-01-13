@@ -288,7 +288,7 @@ function pageFocus() {
 
 jtd.onReady(function(){
   initNav();
-  pageFocus();
+  //pageFocus(); // I Don't like the page being forced to the top every time it loads. This prevents linking to sections directly.
   if (typeof lunr !== 'undefined') {
     initSearch();
   }
