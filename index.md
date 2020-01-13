@@ -21,9 +21,11 @@ Just the Docs gives your documentation a jumpstart with a responsive Jekyll them
 
 [More about Clark's Upgrades](docs/upgrades){: .btn .btn-primary}
 
-1. Nicer-looking Navigation
+1. Nicer-looking navigation
 2. Inclusion of FontAwesome icons
-3. A few smaller visual tweaks
+3. Modal overlays to zoom in on images (thanks to jtebert)
+4. Simple image galleries for side-by-side images
+5. A few smaller visual tweaks
 
 
 ## Getting started

@@ -43,31 +43,71 @@ Thanks to [jtebert](https://github.com/jtebert) for the base code. I've added a 
 
 **Example (Markdown):**
 
+{% raw %}
 ``` markdown
 ![This image has transparency]({{ "assets/images/just-the-docs.png" | absolute_url }})
 ```
+{% endraw %}
 
 ![This image has transparency]({{ "assets/images/just-the-docs.png" | absolute_url }})
 
+
 **Example (HTML):**
 
+{% raw %}
 ``` html
-<img alt="This image has transparency"
-	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
-	 class="gallery gallery-50"/>
 <img alt="This image has a white background"
-	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
-	 class="gallery gallery-50"/>
+     src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"/>
+
+```
+{% endraw %}
+
+<img alt="This image has a white background"
+     src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"/>
+
+
+
+## Image galleries
+Use image galleries to put pictures side-by-side. Don't worry, they will be placed vertically if the screen is too small.
+
+Image widths are be hard-coded in increments of 10%. Use the `gallery` class to put images in a gallery, then use one of the sizeing classes (`gallery-##`) to set the image widths.
+
+**Example (Markdown):**
+
+{% raw %}
+``` markdown
+![This image has transparency]({{ "assets/images/just-the-docs.png" | absolute_url }}){: .gallery .gallery-50}
+![This image has a white background]({{ "assets/images/just-the-docs-white.png" | absolute_url }}){: .gallery .gallery-50}
 
 <!--NOTE: You cannot have lines between images or they will be parsed as new paragraphs-->
 ```
+{% endraw %}
 
-<img alt="This image has transparency"
-	 src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
-	 class="gallery gallery-50"/>
-<img alt="This image has a white background"
-	 src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
-	 class="gallery gallery-50"/>
+![This image has transparency]({{ "assets/images/just-the-docs.png" | absolute_url }}){: .gallery .gallery-50}
+![This image has a white background]({{ "assets/images/just-the-docs-white.png" | absolute_url }}){: .gallery .gallery-50}
+
+
+**Example (HTML):**
+
+{% raw %}
+``` html
+<img alt="This image has transparency, and is 40% width"
+     src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
+     class="gallery gallery-40"/>
+<img alt="This image has a white background, and is 60% width"
+     src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
+     class="gallery gallery-60"/>
+
+<!--NOTE: You cannot have lines between images or they will be parsed as new paragraphs-->
+```
+{% endraw %}
+
+<img alt="This image has transparency, and is 40% width"
+     src="{{ "assets/images/just-the-docs.png" | absolute_url }}"
+     class="gallery gallery-40"/>
+<img alt="This image has a white background, and is 60% width"
+     src="{{ "assets/images/just-the-docs-white.png" | absolute_url }}"
+     class="gallery gallery-60"/>
 
 
 

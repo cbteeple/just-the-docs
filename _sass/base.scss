@@ -140,7 +140,6 @@ hr {
     transition: all 0.3s;
     &.active{
         visibility: visible;
-        cursor: zoom-out;
         opacity: 1;
         #modal {
             #modal-content {
@@ -159,18 +158,23 @@ hr {
     }
     #modal {
         transition: all 0.3s;
-        display: block;
+        //display: block;
+        display: flex;
+        justify-content: space-between ;
+        align-items: center;
         position: relative;
         width: 90%;
         margin: auto;
         top: 50%;
         transform: translateY(-50%);
         #modal-img {
+            cursor: zoom-out;
             display: block;
             position: relative;
             max-height: 90vh;
             margin: auto;
         }
+
 
         #modal-content{
           transition: all 0.3s;
@@ -184,6 +188,29 @@ hr {
         }
 
       }
+
+    .modal-btn{
+      font-size: 50px;
+      display: block;
+      color:$grey-dk-000;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover{
+        color:$grey-lt-300;
+      }
+
+
+    }
+
+    #modal-close {
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 15px;
+    }
+
 }
 
 //
