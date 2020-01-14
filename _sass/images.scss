@@ -74,22 +74,6 @@
           padding: 1em;
         }
 
-        #modal-img-a{
-          padding:0.5em;
-          padding-right: 1.0em;
-          padding-left: 1.0em;
-          margin: auto;
-          display: inline-block;
-          background: $grey-dk-000;
-          color: $grey-dk-300;
-          transition: all 0.2s;
-          border-radius: 2.0em;
-
-          &:hover{
-            background:$grey-lt-300;
-          }
-        }
-
       }
 
     .modal-btn{
@@ -104,6 +88,7 @@
 
       .svg-inline--fa{
         min-width: 1em;
+        font-size: 50px;
       }
 
       &:hover{
@@ -111,15 +96,36 @@
       }
     }
 
-    .modal-small-nav{
+    #modal-img-a{
+      font-size: 16px;
+          padding:0.7em;
+          padding-right: 1.0em;
+          padding-left: 1.0em;
+          margin: auto;
+          display: inline-block;
+          background: $grey-dk-000;
+          color: $grey-dk-300;
+          transition: all 0.2s;
+          border-radius: 2.0em;
+
+          &:hover{
+            background:$grey-lt-300;
+          }
+        }
+
+    .modal-small-nav-container{
       display: flex;
       justify-content: space-evenly;
       z-index: 2000;
       position: absolute;
       width: 100%;
       bottom: 0;
-      @include mq(md){
-        display:none;
+    }
+
+    .modal-small-nav{
+      visibility: visible;
+         @include mq(md){
+        visibility: hidden;
       } 
     }
 
@@ -131,11 +137,14 @@
     }
 
     #modal-close {
-      font-size: 30px;
+      z-index: 2000;
       position: absolute;
       top: 0;
       right: 0;
       padding: 15px;
+      .svg-inline--fa{
+        font-size: 30px;
+      }
     }
 
     .modal-btn-hidden{

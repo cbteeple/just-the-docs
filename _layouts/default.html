@@ -115,7 +115,6 @@ layout: table_wrappers
             <div id="modal-content">
               <img id="modal-img"/>
               <div id="modal-description"/></div>
-              <a href="#" id="modal-img-a" class=".modal-btn"><div>Scroll To Image</div></a>
             </div>
             <a href="javascript:void(0);" id="modal-next" class="modal-main-nav modal-btn" title="Next (Right Arrow Key)">
               <i class="fas fa-chevron-circle-right"></i>
@@ -125,11 +124,14 @@ layout: table_wrappers
               <i class="fas fa-times-circle"></i>
         </a>
 
-        <div class="modal-small-nav">
-          <a href="javascript:void(0);" id="modal-prev-aux" class=" modal-btn">
+        <div class="modal-small-nav-container">
+          <a href="javascript:void(0);" id="modal-prev-aux" class="modal-small-nav modal-btn">
               <i class="fas fa-chevron-circle-left"></i>
             </a>
-          <a href="javascript:void(0);" id="modal-next-aux" class="modal-btn">
+          <a href="#" id="modal-img-a" class="modal-btn">
+            <div>Scroll To Image</div>
+          </a>
+          <a href="javascript:void(0);" id="modal-next-aux" class="modal-small-nav modal-btn">
               <i class="fas fa-chevron-circle-right"></i>
           </a>
         </div>
