@@ -36,15 +36,17 @@ var setButtons = function (img){
     if (idx>=page_imgs.length-1){
         //Hide the "next" button
         toggleNext(0);
-        togglePrev(1);
-    }
-    else if((idx)<=0){
-        togglePrev(0);
-        toggleNext(1);
     }
     else {
         //Show the "next" button
         toggleNext(1);
+    }
+    
+    if((idx)<=0){
+        togglePrev(0);
+    }
+    else {
+        //Show the "next" button
         togglePrev(1);
     }
 }
