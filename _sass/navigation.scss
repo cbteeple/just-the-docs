@@ -38,8 +38,12 @@
 }
 
 .navigation-list-item {
-  @include fs-4;
+  @include fs-6;
   margin: 0;
+
+  @include mq(sm) {
+    @include fs-5;
+  }
 
   @include mq(md) {
     @include fs-3;
@@ -58,12 +62,19 @@
 
 .navigation-list-link {
   display: block;
-  padding-top: $sp-1;
-  padding-bottom: $sp-1;
-  padding-left: 0.7em;
-  padding-right: 0.7em;
-  border-radius: 1.0em;
+  padding-top: $sp-2;
+  padding-bottom: $sp-2;
+  padding-left: 1.0em;
+  padding-right: 1em;
+  border-radius: 1.5em;
   display:flex;
+  @include mq(md) {
+    padding-top: $sp-1;
+    padding-bottom:$sp-1;
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    border-radius: 1.0em;
+  }
 
   &:hover{
     background-color: $nav-link-hover-color;
