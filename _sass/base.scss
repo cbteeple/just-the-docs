@@ -195,12 +195,30 @@ hr {
       color:$grey-dk-000;
       cursor: pointer;
       transition: color 0.2s;
+      padding: 10px;
 
       &:hover{
         color:$grey-lt-300;
       }
+    }
 
+    .modal-small-nav{
+      display: flex;
+      justify-content: space-evenly;
+      z-index: 2000;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      @include mq(sm){
+        display:none;
+      } 
+    }
 
+    .modal-main-nav{
+      display:none;
+      @include mq(sm){
+        display:block;
+      } 
     }
 
     #modal-close {

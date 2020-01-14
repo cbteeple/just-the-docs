@@ -2,6 +2,8 @@ var modalOverlay = document.getElementById("modal-overlay");
 var modalClose = document.getElementById("modal-close");
 var modalNext = document.getElementById("modal-next");
 var modalPrev = document.getElementById("modal-prev");
+var modalNextAux = document.getElementById("modal-next-aux");
+var modalPrevAux = document.getElementById("modal-prev-aux");
 var modalImg = document.getElementById("modal-img");
 var modalDes = document.getElementById("modal-description");
 var imageClicked=null;
@@ -75,6 +77,8 @@ modalClose.addEventListener('click', closeModal);
 modalImg.addEventListener('click', closeModal);
 modalNext.addEventListener('click', nextImage);
 modalPrev.addEventListener('click', prevImage);
+modalNextAux.addEventListener('click', nextImage);
+modalPrevAux.addEventListener('click', prevImage);
 
 document.addEventListener('keyup', function (e) {
     // Close the image modal if ESC is pressed
