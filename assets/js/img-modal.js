@@ -5,8 +5,10 @@ var modalPrev = document.getElementById("modal-prev");
 var modalNextAux = document.getElementById("modal-next-aux");
 var modalPrevAux = document.getElementById("modal-prev-aux");
 var modalImg = document.getElementById("modal-img");
+var modalImgLink = document.getElementById("modal-img-a");
 var modalDes = document.getElementById("modal-description");
 var imageClicked=null;
+var currImage=null;
 var page_imgs = document.getElementById("main-content").querySelectorAll("img:not(#modal-content)");
 
 var openModal = function (img) {
@@ -16,10 +18,39 @@ var openModal = function (img) {
     // img.classList.add('active-modal');
     imageClicked = img;
     modalImg.src = img.src;
+    modalImgLink.href= "#"+img.id;
     modalDes.innerHTML = img.alt;
     modalOverlay.classList.add('active');
+    setButtons(img);
     //modalOverlay.classList.add('add-bg');
 }
+
+
+var setButtons = function (img){
+
+    var id_tmp = img.id;
+    id_tmp = id_tmp.replace("image_", "");
+
+    var idx = parseInt(id_tmp);
+
+    if (idx>=page_imgs.length-1){
+        //Hide the "next" button
+        toggleNext(0);
+        togglePrev(1);
+    }
+    else if((idx)<=0){
+        togglePrev(0);
+        toggleNext(1);
+    }
+    else {
+        //Show the "next" button
+        toggleNext(1);
+        togglePrev(1);
+    }
+}
+
+
+
 
 var closeModal = function () {
     modalOverlay.classList.remove('active');
@@ -32,11 +63,13 @@ var nextImage = function () {
     if (imageClicked){
         var img_found;
         var next_img_idx;
-        for (i=0;i<page_imgs.length;i++){
+        for (var i=0;i<page_imgs.length;i++){
             if (page_imgs[i].id == imageClicked.id){
                 img_found = page_imgs[i];
                 if ((i+1)>=0 & (i+1)<page_imgs.length){
-                    page_imgs[i+1].click();
+                    openModal(page_imgs[i+1]);
+                    //page_imgs[i+1].click();
+                    //setButtons(i+1);
                 }
                 break
             }
@@ -52,13 +85,38 @@ var prevImage = function () {
             if (page_imgs[i].id == imageClicked.id){
                 img_found = page_imgs[i];
                 if ((i-1)>=0 & (i-1)<page_imgs.length){
-                    page_imgs[i-1].click();
+                    openModal(page_imgs[i-1]);
                 }
                 break
             }
         }
     }
 }
+
+var toggleNext= function (state){
+    if (state == 0){
+        modalNext.classList.add('modal-btn-hidden');
+        modalNextAux.classList.add('modal-btn-hidden');  
+    }
+    else{
+        modalNext.classList.remove('modal-btn-hidden');
+        modalNextAux.classList.remove('modal-btn-hidden'); 
+    }
+    
+}
+
+var togglePrev= function (state){
+    if (state == 0){
+        modalPrev.classList.add('modal-btn-hidden');
+        modalPrevAux.classList.add('modal-btn-hidden');  
+    }
+    else{
+        modalPrev.classList.remove('modal-btn-hidden');
+        modalPrevAux.classList.remove('modal-btn-hidden'); 
+    }
+    
+}
+
 
 
 
@@ -67,7 +125,7 @@ window.onload = function () {
     var page_imgs = document.getElementById("main-content").querySelectorAll("img:not(#modal-content)");
     // Add click opener to every image
     for (var i = 0; i < page_imgs.length; i++) {
-        page_imgs[i].id=i;
+        page_imgs[i].id="image_"+i;
         page_imgs[i].addEventListener('click', function () { openModal(this) });
         page_imgs[i].addEventListener("mouseover", function () { this.style.cursor = "zoom-in" })
     }
@@ -79,6 +137,7 @@ modalNext.addEventListener('click', nextImage);
 modalPrev.addEventListener('click', prevImage);
 modalNextAux.addEventListener('click', nextImage);
 modalPrevAux.addEventListener('click', prevImage);
+modalImgLink.addEventListener('click', closeModal);
 
 document.addEventListener('keyup', function (e) {
     // Close the image modal if ESC is pressed

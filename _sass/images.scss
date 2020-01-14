@@ -1,0 +1,146 @@
+//
+// Labels (not the form kind)
+//
+
+
+// Image modal/lightbox
+
+.active-modal {
+    border: 3px solid red;
+}
+
+#modal-overlay {
+    display: block;
+    visibility: hidden;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: all 0.3s;
+    &.active{
+        visibility: visible;
+        opacity: 1;
+        #modal {
+            #modal-content {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &.add-bg{
+        #modal {
+            #modal-content {
+                background: $body-background-color;
+            }
+        }
+
+    }
+    #modal {
+        transition: all 0.3s;
+        //display: block;
+        display: flex;
+        justify-content: space-between ;
+        align-items: center;
+        position: relative;
+        width: 90%;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        #modal-img {
+            cursor: zoom-out;
+            display: block;
+            position: relative;
+            max-height: 90vh;
+            margin: auto;
+        }
+
+
+        #modal-content{
+          transition: all 0.3s;
+          transform: scale(0.7);
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+        }
+
+        #modal-description {
+          color: #fff;
+          text-align: center;
+          padding: 1em;
+        }
+
+        #modal-img-a{
+          padding:0.5em;
+          padding-right: 1.0em;
+          padding-left: 1.0em;
+          margin: auto;
+          display: inline-block;
+          background: $grey-dk-000;
+          color: $grey-dk-300;
+          transition: all 0.2s;
+          border-radius: 2.0em;
+
+          &:hover{
+            background:$grey-lt-300;
+          }
+        }
+
+      }
+
+    .modal-btn{
+      font-size: 50px;
+      display: block;
+      color:$grey-dk-000;
+      cursor: pointer;
+      transition: all 0.2s;
+      padding: 10px;
+      background: none;
+      border: none;
+
+      .svg-inline--fa{
+        min-width: 1em;
+      }
+
+      &:hover{
+        color:$grey-lt-300;
+      }
+    }
+
+    .modal-small-nav{
+      display: flex;
+      justify-content: space-evenly;
+      z-index: 2000;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      @include mq(md){
+        display:none;
+      } 
+    }
+
+    .modal-main-nav{
+      display:none;
+      @include mq(md){
+        display:block;
+      } 
+    }
+
+    #modal-close {
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 15px;
+    }
+
+    .modal-btn-hidden{
+      visibility: hidden;
+      opacity: 0;
+    }
+
+}
