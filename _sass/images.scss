@@ -47,17 +47,10 @@
         justify-content: space-between ;
         align-items: center;
         position: relative;
-        width: 90%;
+        width: calc(100vw - 100px);
+        height: calc(100vh -  #{$lightbox-nav-height});
         margin: auto;
-        top: 50%;
-        transform: translateY(-50%);
-        #modal-img {
-            cursor: zoom-out;
-            display: block;
-            position: relative;
-            max-height: 90vh;
-            margin: auto;
-        }
+
 
 
         #modal-content{
@@ -66,18 +59,30 @@
           margin: auto;
           display: flex;
           flex-direction: column;
+          //width: 100%;
+        }
+
+        #modal-img {
+            //cursor: zoom-out;
+            display: block;
+            position: relative;
+            max-width: 100%;
+            margin-top: 10px;
+            object-fit: contain;
+            max-height: calc(100vh -  #{$lightbox-nav-height} - 2.4em);
         }
 
         #modal-description {
           color: #fff;
           text-align: center;
-          padding: 1em;
+          padding: 0.5em;
+          @include fs-3;
+
         }
 
       }
 
     .modal-btn{
-      font-size: 50px;
       display: block;
       color:$grey-dk-000;
       cursor: pointer;
@@ -89,6 +94,7 @@
       .svg-inline--fa{
         min-width: 1em;
         font-size: 50px;
+        margin:0;
       }
 
       &:hover{
@@ -96,8 +102,19 @@
       }
     }
 
+
+    
     #modal-img-a{
-      font-size: 16px;
+      //transition: all 0.2s;
+      //border-radius: 2.0em;
+
+      &:hover{
+      }
+    }
+    
+    /*
+    #modal-img-a{
+      @include fs-4;
           padding:0.7em;
           padding-right: 1.0em;
           padding-left: 1.0em;
@@ -112,21 +129,24 @@
             background:$grey-lt-300;
           }
         }
+        */
 
     .modal-small-nav-container{
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
       z-index: 2000;
       position: absolute;
       width: 100%;
       bottom: 0;
+      height: $lightbox-nav-height;
     }
 
     .modal-small-nav{
       visibility: visible;
-         @include mq(md){
-        visibility: hidden;
-      } 
+        // @include mq(md){
+        //visibility: hidden;
+      //} 
     }
 
     .modal-main-nav{
@@ -141,7 +161,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      padding: 15px;
+      //padding: 15px;
       .svg-inline--fa{
         font-size: 30px;
       }

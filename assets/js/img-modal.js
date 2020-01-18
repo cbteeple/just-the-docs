@@ -97,11 +97,11 @@ var prevImage = function () {
 
 var toggleNext= function (state){
     if (state == 0){
-        modalNext.classList.add('modal-btn-hidden');
+        //modalNext.classList.add('modal-btn-hidden');
         modalNextAux.classList.add('modal-btn-hidden');  
     }
     else{
-        modalNext.classList.remove('modal-btn-hidden');
+        //modalNext.classList.remove('modal-btn-hidden');
         modalNextAux.classList.remove('modal-btn-hidden'); 
     }
     
@@ -109,11 +109,11 @@ var toggleNext= function (state){
 
 var togglePrev= function (state){
     if (state == 0){
-        modalPrev.classList.add('modal-btn-hidden');
+        //modalPrev.classList.add('modal-btn-hidden');
         modalPrevAux.classList.add('modal-btn-hidden');  
     }
     else{
-        modalPrev.classList.remove('modal-btn-hidden');
+        //modalPrev.classList.remove('modal-btn-hidden');
         modalPrevAux.classList.remove('modal-btn-hidden'); 
     }
     
@@ -135,11 +135,15 @@ window.onload = function () {
 
 modalClose.addEventListener('click', closeModal);
 modalImg.addEventListener('click', closeModal);
-modalNext.addEventListener('click', nextImage);
-modalPrev.addEventListener('click', prevImage);
+//modalNext.addEventListener('click', nextImage);
+//modalPrev.addEventListener('click', prevImage);
 modalNextAux.addEventListener('click', nextImage);
 modalPrevAux.addEventListener('click', prevImage);
 modalImgLink.addEventListener('click', closeModal);
+
+
+
+
 
 document.addEventListener('keyup', function (e) {
     // Close the image modal if ESC is pressed

@@ -108,30 +108,46 @@ layout: table_wrappers
   <!--Build the modal overlay for nice picture display-->
   <div class="wrapper" style="position: relative">
     <div id="modal-overlay">
-        <div id="modal">
-            <a href="javascript:void(0);" id="modal-prev" class="modal-main-nav modal-btn" title="Previous (Left Arrow Key)">
-              <i class="fas fa-chevron-circle-left"></i>
+      <!--
+      <a href="javascript:void(0);" id="modal-prev" class="modal-main-nav modal-btn" title="Previous (Left Arrow Key)">
+        <i class="fas fa-chevron-circle-left"></i>
+      </a>
+      -->
+      <div id="modal">
+          <div id="modal-content">
+            <a href="#" id="modal-img-a" class="img-overlay-container" title="Scroll to Image">
+                <img id="modal-img"/>
             </a>
-            <div id="modal-content">
-              <img id="modal-img"/>
-              <div id="modal-description"/></div>
-            </div>
-            <a href="javascript:void(0);" id="modal-next" class="modal-main-nav modal-btn" title="Next (Right Arrow Key)">
-              <i class="fas fa-chevron-circle-right"></i>
-            </a>
-        </div>
+            <div id="modal-description"/></div>
+          </div>
+      </div>
+      <!--
+      <a href="javascript:void(0);" id="modal-next" class="modal-main-nav modal-btn" title="Next (Right Arrow Key)">
+        <i class="fas fa-chevron-circle-right"></i>
+      </a>
+      -->
+
+
         <a href="javascript:void(0);" id="modal-close" class="modal-btn" title="Close (Esc)">
               <i class="fas fa-times-circle"></i>
         </a>
 
         <div class="modal-small-nav-container">
-          <a href="javascript:void(0);" id="modal-prev-aux" class="modal-small-nav modal-btn">
+          <a href="javascript:void(0);"
+             id="modal-prev-aux"
+             class="modal-small-nav modal-btn"
+             title="Previous (Left Arrow Key)">
               <i class="fas fa-chevron-circle-left"></i>
             </a>
+          <!--
           <a href="#" id="modal-img-a" class="modal-btn">
             <div>Scroll To Image</div>
           </a>
-          <a href="javascript:void(0);" id="modal-next-aux" class="modal-small-nav modal-btn">
+          -->
+          <a href="javascript:void(0);"
+             id="modal-next-aux"
+             class="modal-small-nav modal-btn"
+             title="Next (Right Arrow Key)">
               <i class="fas fa-chevron-circle-right"></i>
           </a>
         </div>
