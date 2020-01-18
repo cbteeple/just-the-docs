@@ -52,12 +52,14 @@ use_font_awesome: true
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nill # toggle-light, toggle-dark, nil, dark
 
+external_links: new-tab
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
 #ga_tracking: UA-2709176-10
 
 plugins:
   - jekyll-seo-tag
+
 
 compress_html:
   clippings: all
