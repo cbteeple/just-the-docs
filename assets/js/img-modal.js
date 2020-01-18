@@ -56,18 +56,16 @@ var setButtons = function (img){
 
 var closeModal = function () {
     modalOverlay.classList.remove('active');
-
-    imageClicked.classList.add('img-callout');
-
-    setTimeout( function() {
-      imageClicked.classList.remove('img-callout');
-      //imageClicked=null;
-    }, 300);
-
-    
-
-    
     //modalOverlay.classList.remove('add-bg');
+
+    if (imageClicked != null){
+        imageClicked.classList.add('img-callout');
+
+        setTimeout( function() {
+          imageClicked.classList.remove('img-callout');
+          imageClicked=null;
+        }, 300);
+    }    
 }
 
 var nextImage = function () {
