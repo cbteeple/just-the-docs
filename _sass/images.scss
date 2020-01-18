@@ -175,6 +175,12 @@
 }
 
 
+.img-callout{
+  transition: all 0.1s !important;
+  box-shadow: 0 0 0px 4px $base-color ;
+}
+
+
 // Hard Code the image gallery widths
 
 .gallery{
