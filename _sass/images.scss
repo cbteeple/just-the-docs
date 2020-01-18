@@ -47,9 +47,13 @@
         justify-content: space-between ;
         align-items: center;
         position: relative;
-        width: calc(100vw - 100px);
+        width: calc(100vw - 20px);
         height: calc(100vh -  #{$lightbox-nav-height});
         margin: auto;
+
+        @include mq(md){
+          width: calc(100vw - 80px);
+        } 
 
 
 
