@@ -192,6 +192,7 @@
   margin-left: 0.0em;
   margin-top: 1.0em;
   margin-bottom: 1.0em;
+
   @include mq(sm){
     margin-right: $gallery-padding;
     margin-left: $gallery-padding;
@@ -202,46 +203,46 @@
 
 .gallery-10{
   @include mq(sm){
-    width: calc(9% - 2 * #{$gallery-padding});
+    width: calc(9% - 2*#{$gallery-padding});
   }  
 }
 .gallery-20{
   @include mq(sm){
-    width: calc(19% - 2 * #{$gallery-padding});
+    width: calc(19% - 2*#{$gallery-padding});
   }
 }
 .gallery-30{
   @include mq(sm){
-    width: calc(29% - 2 * #{$gallery-padding});
+    width: calc(29% - 2*#{$gallery-padding});
   }
 }
 .gallery-40{ 
   @include mq(sm){
-    width: calc(39% - 2 * #{$gallery-padding});
+    width: calc(39% - 2*#{$gallery-padding});
   }
 }
 .gallery-50{
   @include mq(sm){
-    width: calc(49% - 2 * #{$gallery-padding});
+    width: calc(49% - 2*#{$gallery-padding});
   }
 }
 .gallery-60{
   @include mq(sm){
-    width: calc(59% - 2 * #{$gallery-padding});
+    width: calc(59% - 2*#{$gallery-padding});
   }
 }
 .gallery-70{
   @include mq(sm){
-    width: calc(69% - 2 * #{$gallery-padding});
+    width: calc(69% - 2*#{$gallery-padding});
   }
 }
 .gallery-80{
   @include mq(sm){
-    width: calc(79% - 2 * #{$gallery-padding});
+    width: calc(79% - 2*#{$gallery-padding});
   }
 }
 .gallery-90{
   @include mq(sm){
-    width: calc(89% - 2 * #{$gallery-padding});
+    width: calc(89% - 2*#{$gallery-padding});
   }
 }
