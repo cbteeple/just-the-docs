@@ -64,6 +64,7 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          overflow: hidden;
         }
 
         #modal-img {
@@ -74,7 +75,15 @@
             margin-top: 10px;
             object-fit: contain;
             max-height: calc(100vh -  #{$lightbox-nav-height} - 2.4em);
+
+            transition: opacity 200ms;
+
+            &.transparent{
+              opacity: 0;
+
+            }
         }
+
 
         #modal-description {
           color: #fff;
@@ -82,6 +91,12 @@
           padding: 0.5em;
           @include fs-3;
 
+          transition: opacity 200ms;
+
+          &.transparent{
+            opacity: 0;
+
+          }
         }
 
       }

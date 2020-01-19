@@ -49,7 +49,7 @@ Thanks to [jtebert](https://github.com/jtebert) for the base code. I've added a 
 ```
 {% endraw %}
 
-![This image has transparency]({{ "assets/images/just-the-docs.png" | absolute_url }})
+![This image has transparency]({{ "assets/images/just-the-docs-wide.png" | absolute_url }})
 
 
 **Example (HTML):**

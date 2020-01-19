@@ -48,13 +48,31 @@ var imageClicked=null;
 var currImage=null;
 var page_imgs = document.getElementById("main-content").querySelectorAll("img:not(#modal-content)");
 
+
 var openModal = function (img) {
     // When an image is clicked, put its source in the modal and display it
     // console.log("click open");
     // console.log(img.src);
     // img.classList.add('active-modal');
     imageClicked = img;
-    modalImg.src = img.src;
+
+    if (modalOverlay.classList.contains('active')){
+        modalImg.classList.add('transparent');
+        modalDes.classList.add('transparent');
+        setTimeout( function() {
+            modalImg.src = img.src;
+            modalDes.innerHTML = img.alt;
+            modalImg.classList.remove('transparent');
+            modalDes.classList.remove('transparent');
+            },300);
+    }
+    else{
+        modalImg.src = img.src;
+        modalDes.innerHTML = img.alt;
+    }
+
+    
+
 
     if ( $(img).visible(true) ){
         modalImgLink.href= "javascript:void(0);"
@@ -65,7 +83,7 @@ var openModal = function (img) {
 
 
     
-    modalDes.innerHTML = img.alt;
+    
     modalOverlay.classList.add('active');
     setButtons(img);
     //modalOverlay.classList.add('add-bg');
