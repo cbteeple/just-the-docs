@@ -180,8 +180,9 @@
 
 
 .img-callout{
-  transition: all 0.1s !important;
-  box-shadow: 0 0 0px 4px $base-color ;
+  transition: all 0.0s !important;
+  box-shadow: 0 0 3px 5px $base-color ;
+  transform: translateY(-10px);
 }
 
 

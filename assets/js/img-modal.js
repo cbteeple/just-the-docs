@@ -67,6 +67,7 @@ var openModal = function (img) {
     
     modalDes.innerHTML = img.alt;
     modalOverlay.classList.add('active');
+    imageClicked.classList.add('img-callout');
     setButtons(img);
     //modalOverlay.classList.add('add-bg');
 }
@@ -105,7 +106,7 @@ var closeModal = function () {
     //modalOverlay.classList.remove('add-bg');
 
     if (imageClicked != null){
-        imageClicked.classList.add('img-callout');
+        //imageClicked.classList.add('img-callout');
 
         setTimeout( function() {
           imageClicked.classList.remove('img-callout');
