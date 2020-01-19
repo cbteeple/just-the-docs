@@ -82,8 +82,6 @@ var openModal = function (img) {
     }
 
 
-    
-    
     modalOverlay.classList.add('active');
     setButtons(img);
     //modalOverlay.classList.add('add-bg');
