@@ -91,7 +91,7 @@
           padding: 0.5em;
           @include fs-3;
 
-          @include mq(sm){
+          @include mq(md){
             @include fs-4;
           }
 
