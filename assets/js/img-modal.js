@@ -31,10 +31,6 @@
 
 
 
-
-
-
-
 var modalOverlay = document.getElementById("modal-overlay");
 var modalClose = document.getElementById("modal-close");
 var modalNext = document.getElementById("modal-next");
@@ -122,13 +118,34 @@ var closeModal = function () {
 
     if (imageClicked != null){
         imageClicked.classList.add('img-callout');
-
+        imageCallout();
+        
+        /*
         setTimeout( function() {
           imageClicked.classList.remove('img-callout');
           imageClicked=null;
         }, 300);
+        */
     }    
 }
+
+var imageCallout = function(){
+    console.log(imageClicked)
+    if (imageClicked != null){
+        if ($(imageClicked).visible(true)  ){
+            imageClicked.classList.remove('img-callout');
+            imageClicked=null;
+        }
+        else{
+            setTimeout(function(){
+                imageClicked.classList.remove('img-callout');
+                imageClicked=null;
+            },500)
+
+        }
+    }
+}
+
 
 var nextImage = function () {
 
