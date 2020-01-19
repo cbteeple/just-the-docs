@@ -69,10 +69,6 @@ var openModal = function (img) {
     modalOverlay.classList.add('active');
     setButtons(img);
     //modalOverlay.classList.add('add-bg');
-
-    setTimeout( function() {
-        imageClicked.classList.add('img-callout');
-    },500);
 }
 
 
@@ -109,7 +105,7 @@ var closeModal = function () {
     //modalOverlay.classList.remove('add-bg');
 
     if (imageClicked != null){
-        //imageClicked.classList.add('img-callout');
+        imageClicked.classList.add('img-callout');
 
         setTimeout( function() {
           imageClicked.classList.remove('img-callout');
@@ -127,7 +123,6 @@ var nextImage = function () {
             if (page_imgs[i].id == imageClicked.id){
                 img_found = page_imgs[i];
                 if ((i+1)>=0 & (i+1)<page_imgs.length){
-                    imageClicked.classList.remove('img-callout');
                     openModal(page_imgs[i+1]);
                     //page_imgs[i+1].click();
                     //setButtons(i+1);
@@ -146,7 +141,6 @@ var prevImage = function () {
             if (page_imgs[i].id == imageClicked.id){
                 img_found = page_imgs[i];
                 if ((i-1)>=0 & (i-1)<page_imgs.length){
-                    imageClicked.classList.remove('img-callout');
                     openModal(page_imgs[i-1]);
                 }
                 break
