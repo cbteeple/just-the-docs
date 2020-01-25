@@ -11,7 +11,6 @@
               {%- assign first_level_url = node.url | absolute_url -%}
             {%- endif -%}
 
-
               {% assign all_pages = all_pages | push: node.title %}
               {% assign all_urls = all_urls | push: node.url %}
               {% assign all_levels = all_levels | push: 0 %}
@@ -19,38 +18,42 @@
               {% assign all_crumbs = all_crumbs | push: '/'  %}
 
 
-            {%- if node.has_children -%}
-              {%- assign children_list = site.html_pages | where: "parent", node.title | sort:"nav_order" -%}
-                {%- for child in children_list -%}
+              {% if node.url==page.url or page.parent == node.title or page.grand_parent == node.title  %}
 
 
-                    {% assign all_pages = all_pages | push: child.title %}
-                    {% assign all_urls = all_urls | push: child.url %}
-                    {% assign all_levels = all_levels | push: 1 %}
-
-                    {% assign curr_crumb = node.title | append: ' / ' %}
-                    {% assign all_crumbs = all_crumbs | push: curr_crumb %} 
+              {%- if node.has_children -%}
+                {%- assign children_list = site.html_pages | where: "parent", node.title | sort:"nav_order" -%}
+                  {%- for child in children_list -%}
 
 
-                    {%- if child.has_children -%}
+                      {% assign all_pages = all_pages | push: child.title %}
+                      {% assign all_urls = all_urls | push: child.url %}
+                      {% assign all_levels = all_levels | push: 1 %}
 
-                        {%- assign grand_children_list = site.html_pages | where: "parent", child.title | sort:"nav_order" -%}
-                        {%- for grand_child in grand_children_list -%}
-
-
-                          {% assign all_pages = all_pages | push: grand_child.title %}
-                          {% assign all_urls = all_urls | push: grand_child.url %} 
-                          {% assign all_levels = all_levels | push: 2 %}
-
-                          {% assign curr_crumb = node.title | append: ' / ' | append: child.title | append: ' / ' %}
-
-                          {% assign all_crumbs = all_crumbs |  push: curr_crumb  %} 
+                      {% assign curr_crumb = node.title | append: ' / ' %}
+                      {% assign all_crumbs = all_crumbs | push: curr_crumb %} 
 
 
-                        {%- endfor -%}
-                    {%- endif -%}
-                {%- endfor -%}
-            {%- endif -%}
+                      {%- if child.has_children -%}
+
+                          {%- assign grand_children_list = site.html_pages | where: "parent", child.title | sort:"nav_order" -%}
+                          {%- for grand_child in grand_children_list -%}
+
+
+                            {% assign all_pages = all_pages | push: grand_child.title %}
+                            {% assign all_urls = all_urls | push: grand_child.url %} 
+                            {% assign all_levels = all_levels | push: 2 %}
+
+                            {% assign curr_crumb = node.title | append: ' / ' | append: child.title | append: ' / ' %}
+
+                            {% assign all_crumbs = all_crumbs |  push: curr_crumb  %} 
+
+
+                          {%- endfor -%}
+                      {%- endif -%}
+                  {%- endfor -%}
+              {%- endif -%}
+            {% endif %}
         {%- endif -%}
       {%- endunless -%}
     {%- endfor -%}
