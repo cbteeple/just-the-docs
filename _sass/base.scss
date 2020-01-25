@@ -91,8 +91,9 @@ a:not([class]) {
 
 code {
   font-family: $mono-font-family;
-  font-size: 12px;
-  line-height: $body-line-height;
+  @include fs-3;
+  //font-size: $code-font-size;
+  line-height: $code-line-height;
 }
 
 figure,
