@@ -66,13 +66,14 @@
 {%- for url_item in all_urls -%}
 
   {% if url_item == page.url %}
+  {% assign curr_idx = forloop.index0 %}
   {% assign prev_idx = forloop.index0 | minus: 1 %}
   {% assign next_idx = forloop.index0 | plus: 1 %}
     
     {% if prev_idx >= 1 %}
       <a href="{{ all_urls[prev_idx] | absolute_url }}"
          id="prev-section"
-         class="btn">
+         class="btn {% if all_levels[prev_idx] ==0 %}btn-primary{% endif %}">
         <i class="fas fa-chevron-left"></i>
         <div class="section-nav-content">
         <div class=section-nav-crumb>{{ all_crumbs[prev_idx] }}</div>
@@ -85,7 +86,7 @@
     {% if next_idx < forloop.length %}
       <a href="{{ all_urls[next_idx] | absolute_url }}"
          id="next-section"
-         class="btn">
+         class="btn {% if all_levels[next_idx] ==0 %}btn-primary{% endif %}">
         <div class="section-nav-content">
            <div class=section-nav-crumb>{{ all_crumbs[next_idx] }}</div>
            {{ all_pages[next_idx] }}
