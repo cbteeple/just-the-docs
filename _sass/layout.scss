@@ -230,6 +230,17 @@ body {
     margin-left: 0rem;
     margin-right: 0rem;
     margin-bottom: 1em;
+    background: none;
+    box-shadow: none;
+
+    .section-nav-content{
+      .section-nav-crumb{
+        .svg-inline--fa{
+          width:1em;
+          height:1em;
+        };
+      };
+    };
 
 
     .svg-inline--fa{
@@ -289,4 +300,9 @@ body {
       text-overflow: ellipsis;
       overflow: hidden;
       @include fs-2;
-    }
+
+      .svg-inline--fa{
+        width:1em;
+        height:1em;
+      }
+}

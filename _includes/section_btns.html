@@ -3,6 +3,8 @@
 {% assign all_urls = "" | split: ',' %}
 {% assign all_levels = "" | split: ',' %}
 {% assign all_crumbs = "" | split: ',' %}
+{% assign all_fa = "" | split: ',' %}
+
   {%- assign pages_list = site.html_pages | sort:"nav_order" -%}
     {%- for node in pages_list -%}
       {%- unless node.nav_exclude -%}
@@ -16,6 +18,12 @@
               {% assign all_levels = all_levels | push: 0 %}
 
               {% assign all_crumbs = all_crumbs | push: '/'  %}
+
+              {% if node.font_awesome %}
+                {% assign all_fa = all_fa | push: node.font_awesome  %}
+              {% else %}
+                {% assign all_fa = all_fa | push: ''  %}
+              {% endif %}
 
 
               {% if node.url==page.url or page.parent == node.title or page.grand_parent == node.title  %}
@@ -32,6 +40,7 @@
 
                       {% assign curr_crumb = node.title | append: ' / ' %}
                       {% assign all_crumbs = all_crumbs | push: curr_crumb %} 
+                      {% assign all_fa = all_fa | push: ''  %}
 
 
                       {%- if child.has_children -%}
@@ -47,6 +56,7 @@
                             {% assign curr_crumb = node.title | append: ' / ' | append: child.title | append: ' / ' %}
 
                             {% assign all_crumbs = all_crumbs |  push: curr_crumb  %} 
+                            {% assign all_fa = all_fa | push: ''  %}
 
 
                           {%- endfor -%}
@@ -73,10 +83,16 @@
     {% if prev_idx >= 1 %}
       <a href="{{ all_urls[prev_idx] | absolute_url }}"
          id="prev-section"
-         class="btn {% if all_levels[prev_idx] ==0 %}btn-primary{% endif %}">
+         class="btn">
         <i class="fas fa-chevron-left"></i>
         <div class="section-nav-content">
-        <div class=section-nav-crumb>{{ all_crumbs[prev_idx] }}</div>
+          <div class=section-nav-crumb>
+            {% if all_levels[prev_idx] ==0 %}
+              <i class="{{ all_fa[prev_idx] }}"></i>
+            {% else %}
+              {{ all_crumbs[prev_idx] }}
+            {% endif %}
+          </div>
         {{ all_pages[prev_idx] }}
         </div>
       </a>
@@ -86,9 +102,15 @@
     {% if next_idx < forloop.length %}
       <a href="{{ all_urls[next_idx] | absolute_url }}"
          id="next-section"
-         class="btn {% if all_levels[next_idx] ==0 %}btn-primary{% endif %}">
+         class="btn">
         <div class="section-nav-content">
-           <div class=section-nav-crumb>{{ all_crumbs[next_idx] }}</div>
+          <div class=section-nav-crumb>
+            {% if all_levels[next_idx] ==0 %}
+              <i class="{{ all_fa[next_idx] }}"></i>
+            {% else %}
+              {{ all_crumbs[next_idx] }}
+            {% endif %}
+          </div>
            {{ all_pages[next_idx] }}
         </div>
         <i class="fas fa-chevron-right"></i>
