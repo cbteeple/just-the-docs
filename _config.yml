@@ -52,6 +52,13 @@ use_font_awesome: true
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nill # toggle-light, toggle-dark, nil, dark
 
+
+# code color scheme (default, monokai)
+code_color_scheme:
+  scheme: monokai
+  override_site_theme: false
+
+
 external_links: new-tab
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89

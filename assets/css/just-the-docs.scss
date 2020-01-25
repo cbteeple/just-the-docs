@@ -34,6 +34,20 @@ $logo: "{{ site.logo | absolute_url }}";
 @import "./color_schemes/dark.scss";
 {% endif %}
 
+
+//
+// Import the syntax highlighting color theme
+//
+
+{% if site.code_color_scheme['override_site_theme'] %}
+@import "./color_schemes/code/{{ site.code_color_scheme['scheme'] }}.scss";
+{% else %}
+@import "./color_schemes/code/{{ site.code_color_scheme['scheme'] }}-light.scss";
+{% endif %}
+
+
+
+
 // Modules
 @import "./base";
 @import "./images";
