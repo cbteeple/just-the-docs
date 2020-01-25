@@ -30,6 +30,10 @@
                 transform: scale(1);
             }
         }
+        .modal-small-nav-container{
+          visibility: visible;
+        }
+
     }
 
     &.add-bg{
@@ -156,9 +160,10 @@
 
     .modal-small-nav-container{
       display: flex;
+      visibility: hidden;
       justify-content: space-evenly;
       align-items: center;
-      z-index: 2000;
+      //z-index: -2000;
       position: absolute;
       width: 100%;
       bottom: 0;
@@ -166,10 +171,6 @@
     }
 
     .modal-small-nav{
-      visibility: visible;
-        // @include mq(md){
-        //visibility: hidden;
-      //} 
     }
 
     .modal-main-nav{
@@ -180,7 +181,7 @@
     }
 
     #modal-close {
-      z-index: 2000;
+      z-index: -2000;
       position: absolute;
       top: 0;
       right: 0;
