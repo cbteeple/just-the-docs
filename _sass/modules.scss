@@ -4,18 +4,6 @@
 @import "./vendor/normalize.scss/normalize.scss";
 
 
-
-//
-// Import the syntax highlighting color theme
-//
-
-{% if site.code_color_scheme['override_site_theme'] %}
-@import "./color_schemes/code/{{ site.code_color_scheme['scheme'] }}.scss";
-{% else %}
-@import "./color_schemes/code/{{ site.code_color_scheme['scheme'] }}-light.scss";
-{% endif %}
-
-
 //
 // Modules
 //
