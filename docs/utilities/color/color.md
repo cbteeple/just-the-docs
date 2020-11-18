@@ -2,9 +2,6 @@
 layout: default
 title: Color
 parent: Utilities
-nav_order: 3
-has_children: true
-permalink: docs/utilities/color
 ---
 
 # Color Utilities
