@@ -5,12 +5,7 @@
 // Import the syntax highlighting color theme
 //
 
-{% if site.code_color_scheme['override_site_theme'] %}
-  {% assign code_color = site.code_color_scheme['scheme'] %}
-{% else %}
-  {% assign code_color = site.code_color_scheme['scheme'] + "-light"   %}
-{% endif %}
-{% include css/code-color.scss.liquid color_scheme=code_color %}
+{% assign code_color = site.code_color_scheme['scheme'] %}
 
 //
 // Include the main color theme
@@ -21,6 +16,6 @@
 {% else %}
   {% assign color_scheme = "light" %}
 {% endif %}
-{% include css/just-the-docs.scss.liquid color_scheme=color_scheme %}
+{% include css/just-the-docs.scss.liquid color_scheme=color_scheme code_scheme=code_color %}
 
 
