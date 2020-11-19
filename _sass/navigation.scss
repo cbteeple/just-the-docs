@@ -90,6 +90,10 @@
         );
       }
 
+      svg{
+        transition: all 0.2s;
+      }
+
       @if $nav-list-expander-right {
         svg {
           transform: rotate(90deg);
@@ -255,7 +259,7 @@
   } @else {
     padding-left: $nav-list-item-height-sm;
   } 
-  
+
     @include mq(md) {
       @if $nav-list-expander-right {
         padding-left: #{$gutter-spacing};
