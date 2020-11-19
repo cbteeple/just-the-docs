@@ -4,9 +4,10 @@ title: Home
 nav_order: 1
 description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
 permalink: /
+font_awesome: "fas fa-home"
 ---
 
-# Focus on writing good documentation
+# <i class="{{ page.font_awesome }}"></i> Focus on writing good documentation
 {: .fs-9 }
 
 Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.

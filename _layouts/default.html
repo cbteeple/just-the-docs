@@ -150,6 +150,9 @@ layout: table_wrappers
           </ul>
         {% endif %}
 
+        <hr>
+              {% include section_btns.html %}
+
         {% capture footer_custom %}
           {%- include footer_custom.html -%}
         {% endcapture %}
@@ -198,5 +201,10 @@ layout: table_wrappers
       <div class="search-overlay"></div>
     {% endif %}
   </div>
+
+  {% if site.external_links_new_tab %}
+    <script src="{{ "/assets/js/ext-links.js" | absolute_url }}"></script> 
+  {% endif %}
+
 </body>
 </html>

@@ -5,4 +5,11 @@
 {% else %}
   {% assign color_scheme = "light" %}
 {% endif %}
-{% include css/just-the-docs.scss.liquid color_scheme=color_scheme %}
+
+{% if site.code_color_scheme %}
+  {% assign code_color_scheme = site.code_color_scheme %}
+{% else %}
+  {% assign code_color_scheme = "default-light" %}
+{% endif %}
+
+{% include css/just-the-docs.scss.liquid color_scheme=color_scheme  code_color_scheme=code_color_scheme %}
