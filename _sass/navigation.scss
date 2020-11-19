@@ -3,6 +3,7 @@
 //
 // stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity
 
+
 .nav-list {
   padding: 0;
   margin-top: 0;
@@ -241,7 +242,7 @@
 }
 
 
-
+/*
 .nav-list-item .nav-list-item .nav-list-link  {
   @if $nav-list-expander-right {
     padding-left: $gutter-spacing-sm;
@@ -274,7 +275,7 @@
       }
     }
 }
-
+*/
 
 .nav-list-item .nav-list-item {
   @if $nav-list-expander-right {
@@ -309,17 +310,30 @@
 }
 
 
-.nav-bullets::before {
-  position: absolute;
-  margin-top: 0.6em;
-  margin-left: 0px;
-  color: rgba(92, 89, 98, 0.3);
+.nav-bullets .nav-list-link.active::before{
+    color: $sidebar-color !important;  
+}
+
+
+.nav-bullets .nav-list-link::before {
+  position: relative;
+  margin-top: 0em;
+  //margin-right: 0px;
+  color: rgba($nav-child-link-color,0.4);
   content: "- ";
 
-
-  @include mq(sm) {
-    margin-top: 0.3em;
-    margin-left: 1rem;
+  @if $nav-list-expander-right {
+    padding-right: #{$gutter-spacing-sm/4};
+  } @else {
+    padding-right: #{$nav-list-item-height-sm/4};
+  }    
+  
+  @include mq(md) {
+    @if $nav-list-expander-right {
+      padding-right: #{$gutter-spacing/4};
+    } @else {
+      padding-right: #{$nav-list-item-height/4};
+    }
   }
 }
 
