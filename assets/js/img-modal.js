@@ -30,7 +30,7 @@
 
 
 
-
+var modalTop = document.getElementById("modal");
 var modalOverlay = document.getElementById("modal-overlay");
 var modalClose = document.getElementById("modal-close");
 var modalNext = document.getElementById("modal-next");
@@ -205,6 +205,14 @@ var togglePrev= function (state){
     }
     
 }
+
+
+$('#modal').on('click', function(e) {
+    if (e.target !== this)
+      return;
+    
+    closeModal()
+  });
 
 
 
