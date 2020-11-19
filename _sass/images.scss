@@ -206,6 +206,10 @@
   //transform: translateY(-10px);
 }
 
+img{
+  transition-property: box-shadow,background;
+  transition-duration: 1.0s;
+}
 
 // Hard Code the image gallery widths
 

@@ -15,6 +15,7 @@
 html {
   @include fs-4;
   scroll-behavior: smooth;
+  scroll-padding:  #{$header-height/4};
 }
 
 body {

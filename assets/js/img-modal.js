@@ -119,28 +119,23 @@ var closeModal = function () {
     if (imageClicked != null){
         imageClicked.classList.add('img-callout');
         imageCallout();
-        
-        /*
-        setTimeout( function() {
-          imageClicked.classList.remove('img-callout');
-          imageClicked=null;
-        }, 300);
-        */
     }    
 }
 
 var imageCallout = function(){
-    console.log(imageClicked)
+    //console.log(imageClicked)
     if (imageClicked != null){
         if ($(imageClicked).visible(true)  ){
-            imageClicked.classList.remove('img-callout');
-            imageClicked=null;
+            setTimeout(function(){
+                imageClicked.classList.remove('img-callout');
+                imageClicked=null;
+            },200)
         }
         else{
             setTimeout(function(){
                 imageClicked.classList.remove('img-callout');
                 imageClicked=null;
-            },500)
+            },1300)
 
         }
     }
@@ -208,12 +203,17 @@ var togglePrev= function (state){
 
 
 $('#modal').on('click', function(e) {
-    if (e.target !== this)
+    if (e.target !== this & e.target.id !== 'modal-content')
       return;
     
     closeModal()
-  });
+});
 
+
+$('.img-callout').on('mouseover', function(e) {
+    imageClicked.classList.remove('img-callout');
+    imageClicked=null;
+});
 
 
 
@@ -229,7 +229,7 @@ window.onload = function () {
 }
 
 modalClose.addEventListener('click', closeModal);
-modalImg.addEventListener('click', closeModal);
+//modalImg.addEventListener('click', closeModal);
 //modalNext.addEventListener('click', nextImage);
 //modalPrev.addEventListener('click', prevImage);
 modalNextAux.addEventListener('click', nextImage);
