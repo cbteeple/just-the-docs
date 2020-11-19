@@ -10,6 +10,16 @@
     {% endif %}
   {% endunless %}
 
+
+  <!-- Add FontAwesome to the site-->
+  {% if site.use_font_awesome & site.use_font_awesome != false %}
+    <!--<script src="https://kit.fontawesome.com/a25c836932.js" crossorigin="anonymous"></script>  -->
+    <script defer src="{{ '/assets/css/fontawesome-free-5.15.1-web/js/all.js' | relative_url }}" rel="stylesheet"></script> <!--load all styles -->
+  {% endif %}
+
+  <!-- Add JQuery to the site-->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
 
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
