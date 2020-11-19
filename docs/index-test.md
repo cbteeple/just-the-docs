@@ -2,6 +2,7 @@
 layout: default
 title: Markdown kitchen sink
 nav_order: 99
+font_awesome: fab fa-markdown
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

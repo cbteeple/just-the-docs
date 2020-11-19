@@ -2,9 +2,10 @@
 layout: default
 title: Configuration
 nav_order: 2
+font_awesome: "fas fa-cog"
 ---
 
-# Configuration
+# <i class="{{ page.font_awesome }}"></i> {{ page.title }}
 {: .no_toc }
 
 

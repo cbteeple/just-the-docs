@@ -10,7 +10,7 @@
   list-style: none;
 
   .nav-list-item {
-    @include fs-4;
+    @include fs-5;
     position: relative;
     margin: 0;
 
@@ -37,10 +37,10 @@
         line-height: #{$nav-list-item-height - 2 * $sp-1};
         @if $nav-list-expander-right {
           padding-right: $nav-list-item-height;
-          padding-left: $gutter-spacing;
+          //padding-left: $gutter-spacing;
         } @else {
           padding-right: $gutter-spacing;
-          padding-left: $nav-list-item-height;
+          //padding-left: $nav-list-item-height;
         }
       }
 
@@ -215,6 +215,100 @@
     &::after {
       content: "";
     }
+  }
+}
+
+
+// Make Nice-Looking Nav Bar with FontAwesome
+.svg-inline--fa{
+  margin-right: 10px;
+  width:1.0em;
+}
+
+.nav-icons{
+  display: inline-block;
+  width:1.7em;
+}
+
+
+
+.nav-list-item .nav-list-item .nav-list-link  {
+  @if $nav-list-expander-right {
+    padding-left: $gutter-spacing-sm;
+  } @else {
+    padding-left: $nav-list-item-height-sm;
+  }    
+  
+  @include mq(md) {
+    @if $nav-list-expander-right {
+      padding-left: #{$gutter-spacing};
+    } @else {
+      padding-left: #{$nav-list-item-height};
+    }
+  }
+
+}
+
+.nav-list-item .nav-list-item .nav-list-item .nav-list-link {
+  @if $nav-list-expander-right {
+    padding-left: $gutter-spacing-sm;
+  } @else {
+    padding-left: $nav-list-item-height-sm;
+  } 
+  
+    @include mq(md) {
+      @if $nav-list-expander-right {
+        padding-left: #{$gutter-spacing};
+      } @else {
+        padding-left: #{$nav-list-item-height};
+      }
+    }
+}
+
+.nav-list-item .nav-list-item {
+  @if $nav-list-expander-right {
+    padding-left: #{$gutter-spacing-sm*2.0};
+  } @else {
+    padding-left: #{$nav-list-item-height-sm*2.0};
+  }    
+  
+  @include mq(md) {
+    @if $nav-list-expander-right {
+      padding-left: #{$gutter-spacing/2.0};
+    } @else {
+      padding-left: #{$nav-list-item-height/2.0};
+    }
+  }
+
+}
+
+.nav-list-item .nav-list-item .nav-list-item{
+    @if $nav-list-expander-right {
+      padding-left: #{$gutter-spacing-sm*2.0};
+    } @else {
+      padding-left: #{$nav-list-item-height-sm*2.0};
+    }
+    @include mq(md) {
+      @if $nav-list-expander-right {
+        padding-left: #{$gutter-spacing/2.0};
+      } @else {
+        padding-left: #{$nav-list-item-height/2.0};
+      }
+    }
+}
+
+
+.nav-bullets::before {
+  position: absolute;
+  margin-top: 0.6em;
+  margin-left: 0px;
+  color: rgba(92, 89, 98, 0.3);
+  content: "- ";
+
+
+  @include mq(sm) {
+    margin-top: 0.3em;
+    margin-left: 1rem;
   }
 }
 

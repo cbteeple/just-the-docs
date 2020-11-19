@@ -2,9 +2,10 @@
 layout: default
 title: Navigation Structure
 nav_order: 5
+font_awesome: fas fa-project-diagram
 ---
 
-# Navigation Structure
+# <i class="{{ page.font_awesome }}"></i> {{ page.title }}
 {: .no_toc }
 
 <details open markdown="block">

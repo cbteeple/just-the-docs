@@ -69,13 +69,12 @@ aux_links:
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
-
 external_links_new_tab: true
 
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: default # Capital letters sorted before lowercase
-
+nav_bullets: children # all, children
 # Footer content
 # appears at the bottom of every page's main content
 
