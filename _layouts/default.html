@@ -202,6 +202,10 @@ layout: table_wrappers
     {% endif %}
   </div>
 
+  {% if site.image_lightbox %}
+    {% include modal_overlay.html %}
+  {% endif %}
+
   {% if site.external_links_new_tab %}
     <script src="{{ "/assets/js/ext-links.js" | absolute_url }}"></script> 
   {% endif %}

@@ -103,6 +103,7 @@ color_scheme: light
 code_color_scheme: monokai-light
 
 use_font_awesome: True
+image_lightbox: True
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89

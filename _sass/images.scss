@@ -1,0 +1,270 @@
+//
+// Labels (not the form kind)
+//
+
+
+// Image modal/lightbox
+
+.active-modal {
+    border: 3px solid red;
+}
+
+#modal-overlay {
+    display: block;
+    visibility: hidden;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: all 0.3s;
+    &.active{
+        visibility: visible;
+        opacity: 1;
+        #modal {
+            #modal-content {
+                transform: scale(1);
+            }
+        }
+        .modal-small-nav-container{
+          visibility: visible;
+        }
+
+    }
+
+    &.add-bg{
+        #modal {
+            #modal-content {
+                background: $body-background-color;
+            }
+        }
+
+    }
+    #modal {
+        transition: all 0.3s;
+        //display: block;
+        display: flex;
+        justify-content: space-between ;
+        align-items: center;
+        position: relative;
+        width: calc(100vw - 20px);
+        height: calc(100vh -  #{$lightbox-nav-height});
+        margin: auto;
+
+        @include mq(md){
+          width: calc(100vw - 80px);
+        } 
+
+
+
+        #modal-content{
+          transition: all 0.3s;
+          transform: scale(0.7);
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          overflow: hidden;
+        }
+
+        #modal-img {
+            //cursor: zoom-out;
+            display: block;
+            position: relative;
+            max-width: 100%;
+            margin-top: 10px;
+            object-fit: contain;
+            max-height: calc(100vh -  #{$lightbox-nav-height} - 2.4em);
+
+            transition: opacity 200ms;
+
+            &.transparent{
+              opacity: 0;
+
+            }
+        }
+
+
+        #modal-description {
+          color: #fff;
+          text-align: center;
+          padding: 0.5em;
+          @include fs-3;
+
+          @include mq(md){
+            @include fs-4;
+          }
+
+          transition: opacity 200ms;
+
+          &.transparent{
+            opacity: 0;
+
+          }
+        }
+
+      }
+
+    .modal-btn{
+      display: block;
+      color:$grey-dk-000;
+      cursor: pointer;
+      transition: all 0.2s;
+      padding: 10px;
+      background: none;
+      border: none;
+
+      .svg-inline--fa{
+        min-width: 1em;
+        font-size: 50px;
+        margin:0;
+      }
+
+      &:hover{
+        color:$grey-lt-300;
+      }
+    }
+
+
+    
+    #modal-img-a{
+      //transition: all 0.2s;
+      //border-radius: 2.0em;
+
+      &:hover{
+      }
+    }
+    
+    /*
+    #modal-img-a{
+      @include fs-4;
+          padding:0.7em;
+          padding-right: 1.0em;
+          padding-left: 1.0em;
+          margin: auto;
+          display: inline-block;
+          background: $grey-dk-000;
+          color: $grey-dk-300;
+          transition: all 0.2s;
+          border-radius: 2.0em;
+
+          &:hover{
+            background:$grey-lt-300;
+          }
+        }
+        */
+
+    .modal-small-nav-container{
+      display: flex;
+      visibility: hidden;
+      justify-content: space-evenly;
+      align-items: center;
+      //z-index: -2000;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      height: $lightbox-nav-height;
+    }
+
+    .modal-small-nav{
+    }
+
+    .modal-main-nav{
+      display:none;
+      @include mq(md){
+        display:block;
+      } 
+    }
+
+    #modal-close {
+      z-index: -2000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      //padding: 15px;
+      .svg-inline--fa{
+        font-size: 30px;
+      }
+    }
+
+    .modal-btn-hidden{
+      visibility: hidden;
+      opacity: 0;
+    }
+
+}
+
+
+.img-callout{
+  transition: all 0.0s !important;
+  box-shadow: 0 0 3px 5px $base-color ;
+  background: $base-color ;
+  //transform: translateY(-10px);
+}
+
+
+// Hard Code the image gallery widths
+
+.gallery{
+  margin-right: 0.0em;
+  margin-left: 0.0em;
+  margin-top: 1.0em;
+  margin-bottom: 1.0em;
+
+  @include mq(sm){
+    margin-right: $gallery-padding;
+    margin-left: $gallery-padding;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+  }
+}
+
+.gallery-10{
+  @include mq(sm){
+    width: calc(9% - 2*#{$gallery-padding});
+  }  
+}
+.gallery-20{
+  @include mq(sm){
+    width: calc(19% - 2*#{$gallery-padding});
+  }
+}
+.gallery-30{
+  @include mq(sm){
+    width: calc(29% - 2*#{$gallery-padding});
+  }
+}
+.gallery-40{ 
+  @include mq(sm){
+    width: calc(39% - 2*#{$gallery-padding});
+  }
+}
+.gallery-50{
+  @include mq(sm){
+    width: calc(49% - 2*#{$gallery-padding});
+  }
+}
+.gallery-60{
+  @include mq(sm){
+    width: calc(59% - 2*#{$gallery-padding});
+  }
+}
+.gallery-70{
+  @include mq(sm){
+    width: calc(69% - 2*#{$gallery-padding});
+  }
+}
+.gallery-80{
+  @include mq(sm){
+    width: calc(79% - 2*#{$gallery-padding});
+  }
+}
+.gallery-90{
+  @include mq(sm){
+    width: calc(89% - 2*#{$gallery-padding});
+  }
+}
