@@ -17,6 +17,10 @@ Just the Docs gives your documentation a jumpstart with a responsive Jekyll them
 
 ---
 
+[Clark's Mods]({{ site.baseurl }}/docs/upgrades){: .btn .btn-outline .fs-5 .mb-4 .mb-md-0 .mr-2 } [Clark's Mods]({{ site.baseurl }}/docs/upgrades){: .btn .btn-outline .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+
+---
+
 ## Getting started
 
 ### Dependencies

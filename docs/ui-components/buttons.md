@@ -27,6 +27,7 @@ nav_order: 2
 [Link button](http://example.com/){: .btn .btn-blue }
 [Link button](http://example.com/){: .btn .btn-green }
 
+[Link button](http://example.com/){: .btn .btn-outline .btn-primary }
 [Link button](http://example.com/){: .btn .btn-outline }
 </div>
 ```markdown
@@ -36,6 +37,7 @@ nav_order: 2
 [Link button](http://example.com/){: .btn .btn-blue }
 [Link button](http://example.com/){: .btn .btn-green }
 
+[Link button](http://example.com/){: .btn .btn-outline .btn-primary }
 [Link button](http://example.com/){: .btn .btn-outline }
 ```
 
