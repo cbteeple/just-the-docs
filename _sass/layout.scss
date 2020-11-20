@@ -204,3 +204,14 @@ body {
   height: $sp-5;
   color: $link-color;
 }
+
+
+
+
+
+/* Hide all content while the icons and typefaces are loading */
+html.fa-events-icons-loading body,
+html.fa-events-typefaces-lato-loading body,
+html.fa-events-typefaces-orbitron-loading body {
+display: none;
+}

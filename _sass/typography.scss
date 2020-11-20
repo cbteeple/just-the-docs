@@ -62,3 +62,21 @@ h6,
 .text-right {
   text-align: right !important;
 }
+
+
+
+// Bold Title
+
+h1, h2, h3, h4{
+  font-weight: bolder;
+}
+
+.site-title-text {
+  font-weight: bold;
+  width:100%;
+
+  @include mq(md) {
+      width:200%;
+  }
+
+}

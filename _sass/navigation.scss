@@ -339,6 +339,48 @@
 
 
 
+// Rounded nav bar
+.nav-list-expander{
+    
+  &:hover{
+      background: $sidebar-hover-color;
+      background-image: none !important;
+  }
+
+  &.active{
+      color: $sidebar-color !important;
+      background: $link-color !important;
+      background-image: none !important;
+  }
+}
+
+
+.nav-list-link{
+  color: $link-color;
+
+  @include mq(md) {
+      border-radius: 5em;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+
+  &:hover{
+      background: $sidebar-hover-color;
+      background-image: none !important;
+
+  }
+  
+  
+  &.active{
+      color: $sidebar-color !important;
+      background: $link-color !important;
+      background-image: none !important;
+  }
+}
+
+
+
+
 // Next/Prev Section Buttons
 
 .section-nav{
