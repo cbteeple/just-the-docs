@@ -272,3 +272,23 @@ img{
     width: calc(89% - 2*#{$gallery-padding});
   }
 }
+
+
+.gallery-4to3-tall{
+	@include mq(sm){
+	    width: calc(36.15% - 2*#{$gallery-padding});
+	 }  
+}
+
+.gallery-4to3-wide{
+	@include mq(sm){
+	    width: calc(63.25% - 2*#{$gallery-padding});
+	 } 
+
+}
+
+.gallery-33{
+	@include mq(sm){
+	    width: calc(33% - 2*#{$gallery-padding});
+	 }  
+}
