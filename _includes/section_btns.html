@@ -83,7 +83,7 @@
     {% if prev_idx >= 1 %}
       <a href="{{ all_urls[prev_idx] | absolute_url }}"
          id="prev-section"
-         class="btn">
+         class="btn btn-outline">
         <i class="fas fa-chevron-left"></i>
         <div class="section-nav-content">
           <div class=section-nav-crumb>
@@ -102,7 +102,7 @@
     {% if next_idx < forloop.length %}
       <a href="{{ all_urls[next_idx] | absolute_url }}"
          id="next-section"
-         class="btn">
+         class="btn btn-outline">
         <div class="section-nav-content">
           <div class=section-nav-crumb>
             {% if all_levels[next_idx] ==0 %}
