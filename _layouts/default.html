@@ -65,17 +65,6 @@ layout: table_wrappers
         {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
-    {% if site.versions.available %}
-    {% assign curr_version = site.baseurl | remove: "/" %}
-    <footer class="site-footer">
-      Version: 
-      <select onchange="switch_version(this)" name="version" id="version_selecter">
-      {% for sel in site.versions.available %}
-        <option {% if sel == curr_version %}selected{% endif %} value="/{{ sel }}{{ page.url }}">{{ sel }}</option>
-      {% endfor %}
-      </select>
-    </footer>
-    {% endif %}
     <footer class="site-footer">
       This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
     </footer>
@@ -106,6 +95,21 @@ layout: table_wrappers
                 </a>
               </li>
             {% endfor %}
+            {% if site.versions.available %}
+              <li>
+              {% assign curr_version = site.baseurl | remove: "/" %}
+              <div class="version-selector">
+                <div>Version:</div>
+                <div>
+                <select onchange="switch_version(this)" name="version" id="version_selecter">
+                {% for sel in site.versions.available %}
+                  <option {% if sel == curr_version %}selected{% endif %} value="/{{ sel }}{{ page.url }}">{{ sel }}</option>
+                {% endfor %}
+                </select>
+              </div>
+              </div>
+              </li>
+              {% endif %}
           </ul>
         </nav>
       {% endif %}

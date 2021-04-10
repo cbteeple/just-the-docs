@@ -507,3 +507,59 @@
         height:1em;
       }
 }
+
+
+// Version Selector
+.version-selector{
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    padding: 0.2rem;
+    align-items: center;
+}
+
+select {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-top: 0.3em;
+  padding-right: 1em;
+  padding-bottom: 0.3em;
+  padding-left: 1em;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 1.5;
+  text-decoration: none;
+  vertical-align: baseline;
+  border-width: 0;
+  border-radius: $button-border-radius;
+  transition: all 0.2s;
+
+  color: $link-color;
+  background: $body-background-color;
+  box-shadow: inset 0 0 0 2px $base-button-color, 0 0 0 0px rgba(invert($body-background-color), 0.25);
+
+  &:hover,
+  &:active,
+  &.zeroclipboard-is-hover,
+  &.zeroclipboard-is-active {
+    background: $base-button-color;
+    box-shadow: inset 0 0 0 2px $base-button-color, 0 0 0 0px rgba(invert($body-background-color), 0.25);
+  }
+
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+option{
+  @include fs-4;
+  position: absolute;
+  background-color: $sidebar-color;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
