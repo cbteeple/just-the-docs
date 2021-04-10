@@ -65,6 +65,16 @@ layout: table_wrappers
         {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
+    {% if site.versions.available %}
+    <footer class="site-footer">
+      Version: 
+      <select onchange="switch_version(this)" name="version" id="version_selecter">
+      {% for sel in site.versions.available %}
+        <option {% if sel == site.versions.current %}selected{% endif %} value="{{ site.baseurl }}/{{ sel }}{{ page.url }}">{{ sel }}</option>
+      {% endfor %}
+      </select>
+    </footer>
+    {% endif %}
     <footer class="site-footer">
       This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
     </footer>
@@ -208,6 +218,10 @@ layout: table_wrappers
 
   {% if site.external_links_new_tab %}
     <script src="{{ "/assets/js/ext-links.js" | absolute_url }}"></script> 
+  {% endif %}
+
+  {% if site.versions.available %}
+    <script src="{{ "/assets/js/switch-version.js" | absolute_url }}"></script> 
   {% endif %}
 
 </body>
