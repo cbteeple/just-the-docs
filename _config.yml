@@ -19,7 +19,6 @@ baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
 url: "https://cbteeple.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #versions:
 #  available: ["v1.0", "v2.0", "v2.1" ]
-#  current: "v2.0"
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
