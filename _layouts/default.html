@@ -71,7 +71,7 @@ layout: table_wrappers
       Version: 
       <select onchange="switch_version(this)" name="version" id="version_selecter">
       {% for sel in site.versions.available %}
-        <option {% if sel == curr_version %}selected{% endif %} value="{{ sel }}/{{ page.url }}">{{ sel }}</option>
+        <option {% if sel == curr_version %}selected{% endif %} value="/{{ sel }}{{ page.url }}">{{ sel }}</option>
       {% endfor %}
       </select>
     </footer>
